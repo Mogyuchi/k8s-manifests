@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: buchubot-deployment
+  labels:
+    app: buchubot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: buchubot
+  template:
+    metadata:
+      labels:
+        app: buchubot
+    spec:
+      containers:
+        - name: buchubot
+          image: ghcr.io/kazukazu123123/buchubot:main
+          imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: buchubot-token
+          securityContext:
+            capabilities:
+              drop:
+                - CAP_MKNOD
+                - CAP_NET_RAW
+                - CAP_AUDIT_WRITE
+      nodeName: k3s-server
