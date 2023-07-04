@@ -23,7 +23,7 @@ spec:
               value: "1074665940270186569"
           envFrom:
             - secretRef:
-                name: ra4nm-token
+                name: undefined-token
           securityContext:
             capabilities:
               drop:
