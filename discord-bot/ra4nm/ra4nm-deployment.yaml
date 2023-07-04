@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ra4nm-deployment
+  labels:
+    app: ra4nm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ra4nm
+  template:
+    metadata:
+      labels:
+        app: ra4nm
+    spec:
+      containers:
+        - name: ra4nm
+          image: ghcr.io/misskey-art/role-adder-for-new-member:main
+          imagePullPolicy: Always
+          env:
+            - name: ROLE_ID
+              value: "1074665940270186569"
+          envFrom:
+            - secretRef:
+                name: ra4nm-token
+          securityContext:
+            capabilities:
+              drop:
+                - CAP_MKNOD
+                - CAP_NET_RAW
+                - CAP_AUDIT_WRITE
+      nodeName: k3s-server
