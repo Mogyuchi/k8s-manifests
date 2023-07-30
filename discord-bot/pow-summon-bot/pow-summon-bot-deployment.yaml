@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pow-summon-bot-deployment
+  labels:
+    app: pow-summon-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: pow-summon-bot
+  template:
+    metadata:
+      labels:
+        app: pow-summon-bot
+    spec:
+      containers:
+        - name: pow-summon-bot
+          image: ghcr.io/mogyuchi/pow-summon-discordbot:1.0.0
+          imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: pow-summon-bot-token
+          securityContext:
+            capabilities:
+              drop:
+                - CAP_MKNOD
+                - CAP_NET_RAW
+                - CAP_AUDIT_WRITE
+      nodeName: k3s-server
