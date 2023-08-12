@@ -30,4 +30,3 @@ spec:
                 - CAP_MKNOD
                 - CAP_NET_RAW
                 - CAP_AUDIT_WRITE
-      nodeName: k3s-server
