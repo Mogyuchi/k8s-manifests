@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: ra4nm
-          image: ghcr.io/misskey-art/role-adder-for-new-member:main
+          image: ghcr.io/misskey-art/role-adder-for-new-member:main@sha256:880e351f9e4134b465651f7871d6219aed0a481686412ecf7a8f0571c9f9b430
           imagePullPolicy: Always
           env:
             - name: ROLE_ID
