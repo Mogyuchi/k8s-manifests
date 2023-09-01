@@ -35,3 +35,4 @@ spec:
           resources:
             requests:
               memory: "130Mi"
+              cpu: "15m"
