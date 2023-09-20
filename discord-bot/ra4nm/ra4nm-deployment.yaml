@@ -30,3 +30,7 @@ spec:
                 - CAP_MKNOD
                 - CAP_NET_RAW
                 - CAP_AUDIT_WRITE
+      tolerations:
+        - key: "low-spec"
+          operator: "Exists"
+          effect: "NoExecute"

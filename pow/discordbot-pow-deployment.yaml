@@ -36,3 +36,7 @@ spec:
             requests:
               memory: "130Mi"
               cpu: "15m"
+      tolerations:
+        - key: "low-spec"
+          operator: "Exists"
+          effect: "NoExecute"
