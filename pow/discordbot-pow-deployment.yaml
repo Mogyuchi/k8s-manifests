@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: discordbot-pow
-          image: ghcr.io/j-eoeo/pow:3.8.8@sha256:febd74d1c78d4621f270a5fabf88fe25c8d0847b4592ada178c7788256de8eec
+          image: ghcr.io/j-eoeo/pow:3.8.9@sha256:2bffb466362027e897bf8212575eab4bc2c390d09b0bca44f12d847cda4de7cf
           envFrom:
             - secretRef:
                 name: pow-token
