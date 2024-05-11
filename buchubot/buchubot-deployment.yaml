@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: buchubot
-          image: ghcr.io/kazukazu123123/buchubot:main@sha256:6fd3273af68b8544bb9afd8cb99e83f2f6859ae9814c6c814c93dbe739a1d185
+          image: ghcr.io/kazukazu123123/buchubot:main@sha256:ed30247e3bde00dd8d40a4f370484601baac32ac4af9e1ad2167478865028c57
           imagePullPolicy: Always
           envFrom:
             - secretRef:
