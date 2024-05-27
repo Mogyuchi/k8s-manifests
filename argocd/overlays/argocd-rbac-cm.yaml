@@ -5,6 +5,7 @@ metadata:
 data:
   policy.default: role:guest
   policy.csv: |
+    p, role:guest, applications, get, default/*, allow
     p, role:guest, applications, get, discord-bot/*, allow
     p, role:guest, applications, get, pow/*, allow
     p, role:org-admin, applications, *, */*, allow
