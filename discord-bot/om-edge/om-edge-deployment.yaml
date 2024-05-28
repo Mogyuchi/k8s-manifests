@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: om-edge-deployment
+  labels:
+    app: om-edge
+  annotations:
+    link.argocd.argoproj.io/external-link: https://discord.com/oauth2/authorize?client_id=1245101242443894805
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: om-edge
+  template:
+    metadata:
+      labels:
+        app: om-edge
+    spec:
+      containers:
+        - name: om-edge
+          image: ghcr.io/discordjs-japan/om:edge@sha256:fa109812f804a4eac2a67b9977a0df11dc11a70e925cd888e1601909d9ff11f6
+          imagePullPolicy: Always
+          envFrom:
+            - secretRef:
+                name: om-edge-token
+          securityContext:
+            capabilities:
+              drop:
+                - CAP_MKNOD
+                - CAP_NET_RAW
+                - CAP_AUDIT_WRITE
+      tolerations:
+        - key: "low-spec"
+          operator: "Exists"
+          effect: "NoExecute"
