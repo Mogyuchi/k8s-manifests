@@ -4,6 +4,8 @@ metadata:
   name: discordbot-pow-deployment
   labels:
     app: discordbot-pow
+  annotations:
+    link.argocd.argoproj.io/external-link: https://github.com/j-eoeo/pow/blob/main/README.md#bot-追加-url
 spec:
   replicas: 1
   selector:

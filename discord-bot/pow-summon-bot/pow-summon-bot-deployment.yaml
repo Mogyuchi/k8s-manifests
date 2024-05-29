@@ -4,6 +4,8 @@ metadata:
   name: pow-summon-bot-deployment
   labels:
     app: pow-summon-bot
+  annotations:
+    link.argocd.argoproj.io/external-link: https://discord.com/oauth2/authorize?client_id=1105143574066122933
 spec:
   replicas: 1
   selector:
