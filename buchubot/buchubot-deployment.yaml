@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: buchubot-deployment
+  name: buchubot
   labels:
     app: buchubot
 spec:

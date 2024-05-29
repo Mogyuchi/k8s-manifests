@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ra4nm-deployment
+  name: ra4nm
   labels:
     app: ra4nm
 spec:

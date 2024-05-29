@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pow-summon-bot-deployment
+  name: pow-summon-bot
   labels:
     app: pow-summon-bot
   annotations:
