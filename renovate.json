@@ -8,5 +8,13 @@
   ],
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
-  }
+  },
+  "packageRules": [
+    {
+      "matchDepNames": ["ghcr.io/discordjs-japan/om"],
+      "automerge": true,
+      "automergeType": "branch",
+      "ignoreTests": true
+    }
+  ]
 }
