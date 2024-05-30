@@ -4,7 +4,8 @@
     "config:best-practices",
     ":disableRateLimiting",
     ":disablePrControls",
-    "helpers:pinGitHubActionDigests"
+    "helpers:pinGitHubActionDigests",
+    "security:openssf-scorecard"
   ],
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
