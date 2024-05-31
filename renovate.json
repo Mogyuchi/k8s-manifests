@@ -7,6 +7,7 @@
     "helpers:pinGitHubActionDigests",
     "security:openssf-scorecard"
   ],
+  "commitBodyTable": true,
   "kubernetes": {
     "fileMatch": ["\\.yaml$"]
   },
