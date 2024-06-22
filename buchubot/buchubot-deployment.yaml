@@ -31,3 +31,4 @@ spec:
         - key: "low-spec"
           operator: "Exists"
           effect: "NoExecute"
+    nodeName: e2-1-micro-1
