@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: twibot-to-discord
-  namespace: ced
+  namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
