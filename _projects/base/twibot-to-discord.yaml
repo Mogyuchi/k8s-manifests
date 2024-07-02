@@ -1,0 +1,45 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: twibot-to-discord
+  namespace: argocd
+  # Finalizer that ensures that project is not deleted until it is not referenced by any application
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  # Project description
+  description: ''
+
+  # Allow manifests to deploy from any Git repos
+  sourceRepos:
+  - '*'
+
+  # Only permit applications to deploy to the guestbook namespace in the same cluster
+  # Destination clusters can be identified by 'server', 'name', or both.
+  destinations:
+  - namespace: ced
+    server: https://kubernetes.default.svc
+    name: in-cluster
+
+  # Enables namespace orphaned resource monitoring.
+  orphanedResources:
+    warn: true
+
+  roles:
+  # A role which provides read-only access to all applications in the project
+  - name: read-only
+    description: Read-only privileges to twibot-to-discord
+    policies:
+    - p, proj:twibot-to-discord:read-only, applications, get, twibot-to-discord/*, allow
+    groups:
+    - org-readonly
+
+  # By default, apps may sync to any cluster specified under the `destinations` field, even if they are not
+  # scoped to this project. Set the following field to `true` to restrict apps in this cluster to only clusters
+  # scoped to this project.
+  permitOnlyProjectScopedClusters: true
+
+  # When using Applications-in-any-namespace, this field determines which namespaces this AppProject permits
+  # Applications to reside in. Details: https://argo-cd.readthedocs.io/en/stable/operator-manual/app-any-namespace/
+  sourceNamespaces:
+  - "argocd-apps-*"
