@@ -8,6 +8,11 @@ data:
     p, role:guest, applications, get, default/*, allow
     p, role:guest, applications, get, discord-bot/*, allow
     p, role:guest, applications, get, pow/*, allow
+
+    p, role:org-readonly, applications, get, default/*, allow
+    p, role:org-readonly, applications, get, pow/*, allow
+    p, role:org-readonly, logs, get, *, allow
+
     p, role:org-admin, applications, *, */*, allow
     p, role:org-admin, clusters, get, *, allow
     p, role:org-admin, clusters, create, *, allow
@@ -25,3 +30,4 @@ data:
     p, role:org-admin, exec, create, */*, allow
 
     g, kazu, role:admin
+    g, ced, role:org-readonly
