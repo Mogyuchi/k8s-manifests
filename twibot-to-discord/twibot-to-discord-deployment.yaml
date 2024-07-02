@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: twibot-to-discord
+  labels:
+    app: twibot-to-discord
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: twibot-to-discord
+  template:
+    metadata:
+      labels:
+        app: twibot-to-discord
+    spec:
+      containers:
+        - name: twibot-to-discord
+          image: ghcr.io/zel9278/twibot-to-discord:main
+          imagePullPolicy: IfNotPresent # because digest pinning
+          envFrom:
+            - secretRef:
+                name: ttd-token
+            - secretRef:
+                name: ttd-admin
+          securityContext:
+            capabilities:
+              drop:
+                - CAP_MKNOD
+                - CAP_NET_RAW
+                - CAP_AUDIT_WRITE
+      tolerations:
+        - key: "low-spec"
+          operator: "Exists"
+          effect: "NoExecute"
