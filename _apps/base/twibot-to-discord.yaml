@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: twibot-to-discord
+  namespace: ced
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: ced
+    server: https://kubernetes.default.svc
+  project: twibot-to-discord
+  source:
+    path: twibot-to-discord
+    repoURL: https://github.com/Mogyuchi/k8s-manifests.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
