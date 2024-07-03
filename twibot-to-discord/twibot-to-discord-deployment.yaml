@@ -16,10 +16,8 @@ spec:
     spec:
       containers:
         - name: twibot-to-discord
-          #image: ghcr.io/kazukazu123123/twibot-to-discord:main@sha256:a2cb7ffc6677ac09439170b3003cde4ed4a2934c35c416ea9f38f88365b05332
-          image: ghcr.io/kazukazu123123/twibot-to-discord:main
-          #imagePullPolicy: IfNotPresent # because digest pinning
-          imagePullPolicy: Always
+          image: FROM ghcr.io/zel9278/twibot-to-discord:main@sha256:afa3ec575e641377188abf368932c6f0774d0e4b08a495c4ae162527c3cdb050
+          imagePullPolicy: IfNotPresent # because digest pinning
           envFrom:
             - secretRef:
                 name: ttd-secrets
