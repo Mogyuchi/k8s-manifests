@@ -12,7 +12,7 @@ spec:
   project: twibot-to-discord
   source:
     path: twibot-to-discord
-    repoURL: https://github.com/Mogyuchi/k8s-manifests.git
+    repoURL: https://github.com/eoeo-org/eoeo-deployments.git
     targetRevision: HEAD
   syncPolicy:
     automated:
