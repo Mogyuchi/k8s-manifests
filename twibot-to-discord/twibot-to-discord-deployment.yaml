@@ -31,5 +31,6 @@ spec:
                 - CAP_AUDIT_WRITE
       tolerations:
         - key: "low-spec"
-          operator: "Exists"
+          operator: "Equal"
+          value: "E2.1.Micro"
           effect: "NoExecute"
