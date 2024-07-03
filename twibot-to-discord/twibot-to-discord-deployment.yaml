@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: twibot-to-discord
-          image: ghcr.io/zel9278/twibot-to-discord:main@sha256:9610e063146ced724bd1bde5a7165099aa6ae9acb57bd95968122c75af670c1d
+          image: ghcr.io/kazukazu123123/twibot-to-discord:main
           imagePullPolicy: IfNotPresent # because digest pinning
           envFrom:
             - secretRef:
