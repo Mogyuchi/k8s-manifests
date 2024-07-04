@@ -10,6 +10,7 @@ data:
     p, role:guest, applications, get, pow/*, allow
     p, role:guest, applications, get, twibot-to-discord/*, allow
     p, role:guest, applications, get, sync/*, allow
+    p, role:guest, projects, get, *, allow
 
     p, role:org-readonly, applications, get, default/*, allow
     p, role:org-readonly, applications, get, pow/*, allow
