@@ -5,7 +5,7 @@ metadata:
   labels:
     app: discordbot-pow
   annotations:
-    link.argocd.argoproj.io/external-link: https://github.com/j-eoeo/pow/blob/main/README.md#bot-追加-url
+    link.argocd.argoproj.io/external-link: https://github.com/eoeo-org/pow/blob/main/README.md#bot-追加-url
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: discordbot-pow
-          image: ghcr.io/j-eoeo/pow:3.10.5@sha256:91c2aca7b44628221543501f9a39c3346fe20b5ed7c38c2efddca49172939510
+          image: ghcr.io/eoeo-org/pow:3.10.5@sha256:91c2aca7b44628221543501f9a39c3346fe20b5ed7c38c2efddca49172939510
           envFrom:
             - secretRef:
                 name: pow-token
