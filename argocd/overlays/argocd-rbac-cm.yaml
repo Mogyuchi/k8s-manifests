@@ -9,6 +9,7 @@ data:
     p, role:guest, applications, get, discord-bot/*, allow
     p, role:guest, applications, get, pow/*, allow
     p, role:guest, applications, get, twibot-to-discord/*, allow
+    p, role:guest, applications, get, misskey-bot/*, allow
     p, role:guest, applications, get, sync/*, allow
     p, role:guest, projects, get, *, allow
 
