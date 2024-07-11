@@ -5,28 +5,28 @@ metadata:
   namespace: argocd
 spec:
   # Project description
-  description: ''
+  description: ""
 
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-  - '*'
+    - "*"
 
   # Only permit applications to deploy to the guestbook namespace in the same cluster
   # Destination clusters can be identified by 'server', 'name', or both.
   destinations:
-  - namespace: ced
-    server: https://kubernetes.default.svc
-    name: in-cluster
+    - namespace: ced
+      server: https://kubernetes.default.svc
+      name: in-cluster
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
     warn: true
 
   roles:
-   # A role which provides read-only access to all applications in the project
-  - name: read-only
-    description: Read-only privileges to twibot-to-discord
-    policies:
-    - p, proj:twibot-to-discord:read-only, applications, get, twibot-to-discord/*, allow
-    groups:
-    - org-readonly
+    # A role which provides read-only access to all applications in the project
+    - name: read-only
+      description: Read-only privileges to twibot-to-discord
+      policies:
+        - p, proj:twibot-to-discord:read-only, applications, get, twibot-to-discord/*, allow
+      groups:
+        - org-readonly
