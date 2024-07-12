@@ -37,6 +37,7 @@
       "automerge": true,
       "automergeType": "branch",
       "ignoreTests": true
-    }
+    },
+    { "matchFileNames": ["k3s-upgrade/plans.yaml"], "pinDigests": false }
   ]
 }
