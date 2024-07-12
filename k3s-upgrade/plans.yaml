@@ -31,6 +31,10 @@ spec:
     matchExpressions:
     - key: node-role.kubernetes.io/control-plane
       operator: DoesNotExist
+  tolerations:
+  - key: "low-spec"
+    operator: "Exists"
+    effect: "NoExecute"
   prepare:
     args:
     - prepare
