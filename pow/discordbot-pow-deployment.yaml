@@ -21,13 +21,7 @@ spec:
           image: ghcr.io/eoeo-org/pow:3.10.7@sha256:d2300a9596f7553bcf80712d3d170779a6a67f3860c38548919fd6ad894f2d46
           envFrom:
             - secretRef:
-                name: pow-token
-            - secretRef:
-                name: pow-worker-token
-            - secretRef:
-                name: voicetext
-            - secretRef:
-                name: pow-db
+                name: pow-secrets
           securityContext:
             capabilities:
               drop:
