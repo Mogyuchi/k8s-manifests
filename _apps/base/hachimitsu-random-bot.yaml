@@ -9,7 +9,7 @@ spec:
   destination:
     namespace: ced
     server: https://kubernetes.default.svc
-  project: misskey-bot
+  project: misskey-bots
   source:
     path: hachimitsu-random-bot
     repoURL: https://github.com/eoeo-org/eoeo-deployments.git
