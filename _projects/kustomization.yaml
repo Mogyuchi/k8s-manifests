@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
   - base/sync.yaml
+  - base/pow.yaml
   - base/twibot-to-discord.yaml
