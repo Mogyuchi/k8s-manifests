@@ -23,11 +23,14 @@ spec:
             - secretRef:
                 name: pow-secrets
           securityContext:
+            allowPrivilegeEscalation: false
             capabilities:
               drop:
-                - CAP_MKNOD
-                - CAP_NET_RAW
-                - CAP_AUDIT_WRITE
+                - ALL
+            runAsNonRoot: true
+            runAsUser: 1000
+            seccompProfile:
+              type: RuntimeDefault
           resources:
             requests:
               memory: "130Mi"
