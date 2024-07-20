@@ -24,11 +24,14 @@ spec:
             - secretRef:
                 name: pow-summon-bot-token
           securityContext:
+            allowPrivilegeEscalation: false
             capabilities:
               drop:
-                - CAP_MKNOD
-                - CAP_NET_RAW
-                - CAP_AUDIT_WRITE
+                - ALL
+            runAsNonRoot: true
+            runAsUser: 1000
+            seccompProfile:
+              type: RuntimeDefault
       tolerations:
         - key: "low-spec"
           operator: "Exists"
