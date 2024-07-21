@@ -15,9 +15,7 @@
     {
       "customType": "regex",
       "fileMatch": ["k3s-upgrade/plans.yaml"],
-      "matchStrings": [
-        "version\\s*:\\s*[\"']?(?<currentValue>.+?)[\"']?\\s"
-      ],
+      "matchStrings": ["version\\s*:\\s*[\"']?(?<currentValue>.+?)[\"']?\\s"],
       "depNameTemplate": "k3s",
       "versioningTemplate": "semver-coerced",
       "datasourceTemplate": "custom.k3s"

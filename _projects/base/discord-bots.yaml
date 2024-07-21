@@ -19,8 +19,8 @@ spec:
       name: in-cluster
 
   clusterResourceWhitelist:
-  - group: ''
-    kind: Namespace
+    - group: ""
+      kind: Namespace
 
   # Enables namespace orphaned resource monitoring.
   orphanedResources:
