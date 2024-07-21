@@ -4,5 +4,6 @@ kind: Kustomization
 resources:
   - base/buchubot.yaml
   - base/discordbot-pow.yaml
+  - base/discord-bots.yaml
   - base/twibot-to-discord.yaml
   - base/hachimitsu-random-bot.yaml
