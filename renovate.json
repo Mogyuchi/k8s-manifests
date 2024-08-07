@@ -9,7 +9,8 @@
   ],
   "commitBodyTable": true,
   "kubernetes": {
-    "fileMatch": ["\\.yaml$"]
+    "fileMatch": ["\\.yaml$"],
+    "semanticCommits": "disabled"
   },
   "customManagers": [
     {
