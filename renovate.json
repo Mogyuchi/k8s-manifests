@@ -9,8 +9,7 @@
   ],
   "commitBodyTable": true,
   "kubernetes": {
-    "fileMatch": ["\\.yaml$"],
-    "semanticCommits": "disabled"
+    "fileMatch": ["\\.yaml$"]
   },
   "customManagers": [
     {
@@ -31,6 +30,10 @@
     }
   },
   "packageRules": [
+    {
+      "matchManagers": ["kubernetes"],
+      "semanticCommits": "disabled"
+    },
     {
       "matchDepNames": ["ghcr.io/discordjs-japan/om"],
       "automerge": true,
