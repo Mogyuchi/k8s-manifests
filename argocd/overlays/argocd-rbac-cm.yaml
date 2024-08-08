@@ -35,4 +35,4 @@ data:
     p, role:org-admin, exec, create, */*, allow
 
     g, kazu, role:admin
-    g, ced, role:org-readonly
+    g, eoeo-org, role:org-readonly
