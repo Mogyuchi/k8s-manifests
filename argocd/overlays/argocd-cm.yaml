@@ -22,7 +22,8 @@ data:
           clientSecret: $dex.github.clientSecret
           orgs:
           - name: eoeo-org
-            teams: cd
+            teams:
+              - cd
   # add an additional local user with apiKey and login capabilities
   #   apiKey - allows generating API keys
   #   login - allows to login using UI
