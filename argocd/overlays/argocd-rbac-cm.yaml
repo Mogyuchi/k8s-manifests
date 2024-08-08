@@ -34,6 +34,6 @@ data:
     p, role:org-admin, logs, get, *, allow
     p, role:org-admin, exec, create, */*, allow
 
-    g, kazu, role:admin
-    g, mogyuchi, role:admin
+    g, kazukazu123123, role:admin
+    g, Mogyuchi, role:admin
     g, eoeo-org:cd, role:org-readonly
