@@ -6,6 +6,7 @@ metadata:
     app.kubernetes.io/name: argocd-cm
     app.kubernetes.io/part-of: argocd
 data:
+  url: https://argocd.mogyuchi.jp
   statusbadge.enabled: "true"
   # https://github.com/argoproj/argo-cd/blob/v2.8.4/docs/operator-manual/upgrading/2.3-2.4.md#enable-logs-rbac-enforcement
   # https://github.com/argoproj/argo-cd/issues/10551
