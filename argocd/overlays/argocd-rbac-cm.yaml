@@ -36,4 +36,4 @@ data:
 
     g, kazu, role:admin
     g, mogyuchi, role:admin
-    g, eoeo-org, role:org-readonly
+    g, eoeo-org:cd, role:org-readonly
