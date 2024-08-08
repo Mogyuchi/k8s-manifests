@@ -11,6 +11,7 @@ data:
   # https://github.com/argoproj/argo-cd/blob/v2.8.4/docs/operator-manual/upgrading/2.3-2.4.md#enable-logs-rbac-enforcement
   # https://github.com/argoproj/argo-cd/issues/10551
   server.rbac.log.enforce.enable: "true"
+  admin.enabled: "false"
   users.anonymous.enabled: "true"
   dex.config: |
     connectors:
