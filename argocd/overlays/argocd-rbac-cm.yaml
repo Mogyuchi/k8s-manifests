@@ -35,5 +35,5 @@ data:
     p, role:org-admin, exec, create, */*, allow
 
     g, kazukazu123123, role:admin
-    g, Mogyuchi, role:admin
+    g, mogyuchi@mogyuchi.jp, role:admin
     g, eoeo-org:cd, role:org-readonly
