@@ -11,6 +11,16 @@ data:
   # https://github.com/argoproj/argo-cd/issues/10551
   server.rbac.log.enforce.enable: "true"
   users.anonymous.enabled: "true"
+  dex.config: |
+    connectors:
+      - type: github
+        id: github
+        name: GitHub
+        config:
+          clientID: Ov23liBMMJRLwGZTBy43
+          clientSecret: $dex.github.clientSecret
+          orgs:
+          - name: eoeo-org
   # add an additional local user with apiKey and login capabilities
   #   apiKey - allows generating API keys
   #   login - allows to login using UI
