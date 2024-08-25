@@ -41,6 +41,9 @@
       "automergeType": "branch",
       "ignoreTests": true
     },
-    { "matchFileNames": ["k3s-upgrade/plans.yaml"], "pinDigests": false }
+    {
+      "matchFileNames": ["k3s-upgrade/plans.yaml", "ubuntu/deployment.yaml"],
+      "pinDigests": false
+    }
   ]
 }
