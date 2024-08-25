@@ -25,3 +25,4 @@ data:
           - name: eoeo-org
             teams:
               - cd
+  exec.enabled: "true"
