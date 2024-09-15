@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mmmm
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: mmmm
+    server: https://kubernetes.default.svc
+  project: mmmm
+  sources:
+    - path: fixup-twitter-link
+      repoURL: https://github.com/4m-mazi/k8s-manifests.git
+      targetRevision: HEAD
+    - path: osekkai-chan
+      repoURL: https://github.com/4m-mazi/k8s-manifests.git
+      targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - PruneLast=true
+      - CreateNamespace=true

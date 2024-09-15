@@ -7,3 +7,4 @@ resources:
   - base/discord-bots.yaml
   - base/twibot-to-discord.yaml
   - base/hachimitsu-random-bot.yaml
+  - base/mmmm.yaml
