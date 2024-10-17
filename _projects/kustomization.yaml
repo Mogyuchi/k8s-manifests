@@ -3,6 +3,7 @@ kind: Kustomization
 
 resources:
   - base/sync.yaml
+  - base/arc.yaml
   - base/discord-bots.yaml
   - base/misskey-bots.yaml
   - base/mmmm.yaml
