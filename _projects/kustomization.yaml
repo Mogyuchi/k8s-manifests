@@ -4,6 +4,7 @@ kind: Kustomization
 resources:
   - base/sync.yaml
   - base/discord-bots.yaml
+  - base/gha-runner.yaml
   - base/misskey-bots.yaml
   - base/mmmm.yaml
   - base/pow.yaml
