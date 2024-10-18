@@ -20,6 +20,8 @@ spec:
           value: "https://github.com/eoeo-org"
         - name: githubConfigSecret
           value: "pre-defined-secret"
+        - name: maxRunners
+          value: "5"
         - name: controllerServiceAccount.namespace
           value: arc-systems
         - name: controllerServiceAccount.name
