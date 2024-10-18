@@ -20,6 +20,10 @@ spec:
           value: "https://github.com/Misskey-art"
         - name: githubConfigSecret
           value: "pre-defined-secret"
+        - name: controllerServiceAccount.namespace
+          value: arc-systems
+        - name: controllerServiceAccount.name
+          value: arc-gha-rs-controller
   project: gha-runner
   syncPolicy:
     automated:
