@@ -9,12 +9,15 @@ spec:
   destination:
     namespace: arc-systems
     server: https://kubernetes.default.svc
-  source:
-    chart: gha-runner-scale-set-controller
-    repoURL: ghcr.io/actions/actions-runner-controller-charts
-    targetRevision: 0.9.3
-    helm:
-      releaseName: arc
+  sources:
+    - chart: gha-runner-scale-set-controller
+      repoURL: ghcr.io/actions/actions-runner-controller-charts
+      targetRevision: 0.9.3
+      helm:
+        releaseName: arc
+    - repoURL: https://github.com/Mogyuchi/k8s-manifests.git
+      path: gha-runner-scale-sets
+      targetRevision: HEAD
   project: gha-runner
   syncPolicy:
     automated:
