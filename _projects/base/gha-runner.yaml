@@ -9,7 +9,7 @@ spec:
 
   # Allow manifests to deploy from any Git repos
   sourceRepos:
-    - "https://github.com/Mogyuchi/k8s-manifests.git"
+    - "ghcr.io/actions/actions-runner-controller-charts"
 
   destinations:
     - namespace: arc-systems
