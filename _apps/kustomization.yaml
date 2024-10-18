@@ -5,6 +5,7 @@ resources:
   - base/buchubot.yaml
   - base/discordbot-pow.yaml
   - base/discord-bots.yaml
+  - base/gha-runner-controller.yaml
   - base/twibot-to-discord.yaml
   - base/hachimitsu-random-bot.yaml
   - base/mmmm.yaml
