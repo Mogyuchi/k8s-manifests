@@ -5,7 +5,7 @@ namespace: argocd
 
 resources:
   - namespace.yaml
-  - github.com/argoproj/argo-cd//manifests/cluster-install?ref=v2.13.0
+  - github.com/argoproj/argo-cd//manifests/cluster-install?ref=v2.13.1
   - ingress.yaml
 
 patches:
