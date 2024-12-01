@@ -8,4 +8,5 @@ resources:
   - base/misskey-bots.yaml
   - base/mmmm.yaml
   - base/pow.yaml
+  - base/smee.yaml
   - base/twibot-to-discord.yaml

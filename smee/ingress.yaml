@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: smee-ingress
+  namespace: smee
+
+spec:
+  rules:
+    - host: smee.mogyuchi.jp
+      http:
+        paths:
+          - path: "/"
+            backend:
+              service:
+                name: smee-server
+                port:
+                  number: 3000
+            pathType: Prefix
