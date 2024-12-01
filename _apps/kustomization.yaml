@@ -9,3 +9,4 @@ resources:
   - base/twibot-to-discord.yaml
   - base/hachimitsu-random-bot.yaml
   - base/mmmm.yaml
+  - base/smee.yaml

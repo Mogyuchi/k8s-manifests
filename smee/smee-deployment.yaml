@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: smee
+  labels:
+    app: smee
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: smee
+  template:
+    metadata:
+      labels:
+        app: smee
+    spec:
+      containers:
+        - name: smee
+          image: ghcr.io/probot/smee.io:main
+          imagePullPolicy: IfNotPresent # because digest pinning
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+            runAsNonRoot: true
+            runAsUser: 65532
+            seccompProfile:
+              type: RuntimeDefault
+      tolerations:
+        - key: "low-spec"
+          operator: "Exists"
+          effect: "NoExecute"
