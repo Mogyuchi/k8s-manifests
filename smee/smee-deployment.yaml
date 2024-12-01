@@ -17,6 +17,8 @@ spec:
       containers:
         - name: smee
           image: ghcr.io/probot/smee.io:latest
+          ports:
+            - containerPort: 3000
           imagePullPolicy: IfNotPresent # because digest pinning
           securityContext:
             allowPrivilegeEscalation: false
