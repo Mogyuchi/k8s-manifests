@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: om-edge
-          image: ghcr.io/discordjs-japan/om:edge@sha256:06060a1723817493b96143b04ebc568402f8062043b1b9252d703108891932e1
+          image: ghcr.io/discordjs-japan/om:edge@sha256:54d4e2d86348cf9c0314c095a15a4599d3ef36e6ce9152ef1654b78475f8a5fa
           imagePullPolicy: IfNotPresent # because digest pinning
           envFrom:
             - secretRef:
