@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: smee
-          image: ghcr.io/probot/smee.io:latest
+          image: ghcr.io/probot/smee.io:latest@sha256:3cf2bcec65b8cdd70ef8db87f53bee1945f0ebd620e37e303a3abcb70e007ce2
           ports:
             - containerPort: 3000
           imagePullPolicy: IfNotPresent # because digest pinning
