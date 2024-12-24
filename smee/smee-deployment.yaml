@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: smee
   labels:
+    app.kubernetes.io/name: smee
     app: smee
 spec:
   replicas: 1
