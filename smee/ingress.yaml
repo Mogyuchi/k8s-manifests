@@ -3,6 +3,8 @@ kind: Ingress
 metadata:
   name: smee-ingress
   namespace: smee
+  labels:
+    app.kubernetes.io/name: smee
 
 spec:
   rules:
@@ -12,7 +14,7 @@ spec:
           - path: "/"
             backend:
               service:
-                name: smee-server
+                name: smee-service
                 port:
                   number: 3000
             pathType: Prefix
