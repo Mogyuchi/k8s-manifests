@@ -6,3 +6,4 @@ namespace: smee
 resources:
   - ingress.yaml
   - smee-deployment.yaml
+  - smee-service.yaml
