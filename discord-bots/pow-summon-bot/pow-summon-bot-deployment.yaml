@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: pow-summon-bot
-          image: ghcr.io/eoeo-org/pow-summon-discordbot:1.1.19@sha256:f816954dcfe54f6a6ce097bb23bba27457c8b5c88c91dd013e92454b3a311d24
+          image: ghcr.io/eoeo-org/pow-summon-discordbot:1.1.20@sha256:fb29c15da287a2facac8ee0438c0665364932b19cf4518c09e64e9f081a442ec
           imagePullPolicy: IfNotPresent # because digest pinning
           envFrom:
             - secretRef:
