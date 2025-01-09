@@ -15,7 +15,7 @@ spec:
       targetRevision: 0.10.1
       helm:
         releaseName: arc
-    - repoURL: https://github.com/Mogyuchi/k8s-manifests.git
+    - repoURL: https://github.com/mogyugyu/k8s-deployments.git
       path: gha-runner-scale-sets
       targetRevision: HEAD
   project: gha-runner
