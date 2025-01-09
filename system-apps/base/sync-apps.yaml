@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sync-projects
+  name: sync-apps
   namespace: argocd
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   project: sync
   source:
-    path: _projects
+    path: apps
     repoURL: https://github.com/Mogyuchi/k8s-manifests.git
     targetRevision: HEAD
   syncPolicy:
