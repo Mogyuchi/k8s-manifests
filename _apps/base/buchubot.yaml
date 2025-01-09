@@ -12,7 +12,7 @@ spec:
   project: misskey-bots
   source:
     path: buchubot
-    repoURL: https://github.com/Mogyuchi/k8s-manifests.git
+    repoURL: https://github.com/mogyugyu/k8s-deployments.git
     targetRevision: HEAD
   syncPolicy:
     automated:
