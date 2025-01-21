@@ -20,6 +20,8 @@ spec:
           value: status.mogyuchi.jp
         - name: ingress.hosts[0].paths[0].path
           value: '/'
+        - name: ingress.hosts[0].paths[0].pathType
+          value: Prefix
       values: |
         securityContext:
           allowPrivilegeEscalation: false
