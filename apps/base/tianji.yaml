@@ -4,9 +4,8 @@ metadata:
   name: tianji
 spec:
   destination:
-    name: ''
+    name: in-cluster
     namespace: tianji
-    server: https://kubernetes.default.svc
   source:
     path: ''
     repoURL: https://msgbyte.github.io/charts
