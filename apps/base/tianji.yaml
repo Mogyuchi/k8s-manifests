@@ -13,6 +13,11 @@ spec:
     targetRevision: '0.1.17'
     chart: tianji
     helm: 
+      parameters:
+        - name: ingress.enabled
+          value: 'true'
+        - name: ingress.hosts[0].host
+          value: status.mogyuchi.jp
       values: |
         securityContext:
           allowPrivilegeEscalation: false
