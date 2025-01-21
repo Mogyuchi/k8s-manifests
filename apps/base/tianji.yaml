@@ -12,8 +12,8 @@ spec:
     repoURL: https://msgbyte.github.io/charts
     targetRevision: '0.1.17'
     chart: tianji
-    halm: 
-      values:
+    helm: 
+      values: |
         securityContext:
           allowPrivilegeEscalation: false
           capabilities:
