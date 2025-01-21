@@ -24,6 +24,12 @@ spec:
           value: '/'
         - name: ingress.hosts[0].paths[0].pathType
           value: Prefix
+        - name: ingress.hosts[1].host
+          value: status.misskey.art
+        - name: ingress.hosts[1].paths[0].path
+          value: '/'
+        - name: ingress.hosts[1].paths[0].pathType
+          value: Prefix
       values: |
         securityContext:
           allowPrivilegeEscalation: false
