@@ -14,6 +14,8 @@ spec:
     chart: tianji
     helm: 
       parameters:
+        - name: image.tag
+          value: '1.17.8'
         - name: ingress.enabled
           value: 'true'
         - name: ingress.hosts[0].host
@@ -36,8 +38,6 @@ spec:
           - effect: NoExecute
             key: agent
             operator: Exists
-        image:
-          tag: "1.17.8"
   project: tianji
   syncPolicy:
     automated:
