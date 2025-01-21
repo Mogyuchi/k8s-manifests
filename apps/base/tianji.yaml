@@ -29,7 +29,6 @@ spec:
             operator: Exists
         image:
           tag: "1.17.8"
-  sources: []
   project: tianji
   syncPolicy:
     syncOptions:
