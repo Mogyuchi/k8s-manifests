@@ -1,0 +1,36 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tianji
+spec:
+  destination:
+    name: ''
+    namespace: tianji
+    server: https://kubernetes.default.svc
+  source:
+    path: ''
+    repoURL: https://msgbyte.github.io/charts
+    targetRevision: ''
+    chart: tianji
+    halm: 
+      values: |
+        securityContext:
+          allowPrivilegeEscalation: false
+          capabilities:
+            drop:
+              - ALL
+          runAsNonRoot: true
+          runAsUser: 1000
+          seccompProfile:
+            type: RuntimeDefault
+        tolerations:
+          - effect: NoExecute
+            key: low-spec
+            operator: Exists
+        image:
+          tag: "1.17.8"
+  sources: []
+  project: tianji
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
