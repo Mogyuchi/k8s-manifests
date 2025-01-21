@@ -15,7 +15,7 @@ spec:
     helm: 
       parameters:
         - name: image.tag
-          value: '1.17.8'
+          value: '1.17.9'
         - name: ingress.enabled
           value: 'true'
         - name: ingress.hosts[0].host
