@@ -31,5 +31,8 @@ spec:
           tag: "1.17.8"
   project: tianji
   syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true
