@@ -46,10 +46,9 @@ spec:
                 preference:
                   matchExpressions:
                     - key: topology.kubernetes.io/zone
-                      operator: NotIn
+                      operator: In
                       values:
-                        - detda
-                        - oracle
+                        - shiromc
   project: tianji
   syncPolicy:
     automated:
