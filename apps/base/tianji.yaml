@@ -39,10 +39,6 @@ spec:
           runAsUser: 1000
           seccompProfile:
             type: RuntimeDefault
-        tolerations:
-          - effect: NoExecute
-            key: agent
-            operator: Exists
   project: tianji
   syncPolicy:
     automated:
