@@ -39,16 +39,8 @@ spec:
           runAsUser: 1000
           seccompProfile:
             type: RuntimeDefault
-        affinity:
-          nodeaffinity:
-            preferredduringschedulingignoredduringexecution:
-              - weight: 1
-                preference:
-                  matchExpressions:
-                    - key: topology.kubernetes.io/zone
-                      operator: In
-                      values:
-                        - shiromc
+        nodeSelector:
+          topology.kubernetes.io/zone: shiromc
   project: tianji
   syncPolicy:
     automated:
