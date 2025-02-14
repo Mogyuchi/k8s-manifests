@@ -39,6 +39,17 @@ spec:
           runAsUser: 1000
           seccompProfile:
             type: RuntimeDefault
+        affinity:
+          nodeaffinity:
+            preferredduringschedulingignoredduringexecution:
+              - weight: 1
+                preference:
+                  matchExpressions:
+                    - key: topology.kubernetes.io/zone
+                      operator: NotIn
+                      values:
+                        - detda
+                        - oracle
   project: tianji
   syncPolicy:
     automated:
