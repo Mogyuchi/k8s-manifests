@@ -25,6 +25,9 @@ spec:
     - namespace: eoeo-runners
       server: https://kubernetes.default.svc
       name: in-cluster
+    - namespace: shiromc-runners
+      server: https://kubernetes.default.svc
+      name: in-cluster
 
   clusterResourceWhitelist:
     - group: "*"
